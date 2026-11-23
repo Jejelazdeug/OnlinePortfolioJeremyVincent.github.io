@@ -268,6 +268,7 @@ h1 {
 .map.is-fallback { display: grid; place-items: center; padding: 1.5rem; text-align: center; color: var(--muted); font-size: .95rem; }
 .map-note { margin: .5rem 0 0; font-size: .8125rem; color: var(--muted); }
 .map .leaflet-control-attribution { font-size: 10px; }
+.map .leaflet-tile-pane { filter: grayscale(1) brightness(1.05) contrast(.9); }   /* calm, colourless base map */
 .map .leaflet-popup-content { font-family: var(--sans); font-size: .875rem; line-height: 1.4; margin: .7rem .9rem; }
 .map .leaflet-popup-content strong { color: var(--ink); }
 .map .leaflet-bar a { color: var(--ink); }

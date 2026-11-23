@@ -75,7 +75,7 @@ og-image.jpg            image d’aperçu affichée quand le lien est partagé
 
 ## Crédits
 
-- Carte : [Leaflet](https://leafletjs.com), fonds © OpenStreetMap et © CARTO, chargés seulement
+- Carte : [Leaflet](https://leafletjs.com), fonds © contributeurs OpenStreetMap, chargés seulement
   quand la partie Education apparaît à l’écran.
 - Polices : Bitter et Fira Sans, licence SIL Open Font (voir `fonts/`).
 - Trypano Run s’inspire du jeu du dinosaure hors connexion de Chrome ; tous les sprites sont dessinés en code.

@@ -113,9 +113,9 @@
   function initMap(el) {
     loadLeaflet().then(function (L) {
       var map = L.map(el, { scrollWheelZoom: false, zoomSnap: 0.25, attributionControl: true });
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-        subdomains: "abcd", maxZoom: 18,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
       var lls = PLACES.map(function (p) { return p.ll; });
       var route = L.polyline(lls, { weight: 3, dashArray: "1 8", lineCap: "round" }).addTo(map);
