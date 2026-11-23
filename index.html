@@ -1,14 +1,414 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-clean</title>
-    <script type="module" crossorigin src="./assets/index-D4vrJp2V.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DJ4pIgwj.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="en" data-parasite="brucei" data-cursor="parasite">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jeremy Vincent, PhD – Parasite cell biologist</title>
+  <meta name="description" content="Interactive CV of Jeremy Vincent, PhD in parasite cell biology (University of Montpellier, 2026): the tubulin code in trypanosomatid parasites, publications, awards and two parasite mini-games.">
+  <meta name="author" content="Jeremy Vincent">
+  <link rel="canonical" href="https://jejelazdeug.github.io/OnlinePortfolioJeremyVincent.github.io/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Jeremy Vincent, PhD – Parasite cell biologist">
+  <meta property="og:description" content="Microtubule post-translational modifications in trypanosomatid parasites. Interactive CV, publications and a trypanosome runner game.">
+  <meta property="og:url" content="https://jejelazdeug.github.io/OnlinePortfolioJeremyVincent.github.io/">
+  <meta property="og:image" content="https://jejelazdeug.github.io/OnlinePortfolioJeremyVincent.github.io/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f3f5f7">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="fonts/bitter-var.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/fira-sans-400.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    /* Restore the visitor's parasite before first paint (avoids a colour flash). */
+    try {
+      var saved = localStorage.getItem("parasite");
+      if (saved === "brucei" || saved === "leishmania" || saved === "giardia") {
+        document.documentElement.setAttribute("data-parasite", saved);
+      } else if (saved === "classic") {
+        document.documentElement.setAttribute("data-cursor", "classic");
+      }
+    } catch (e) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jeremy Vincent",
+    "honorificSuffix": "PhD",
+    "jobTitle": "Parasite cell biologist",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Montpellier" },
+    "email": "mailto:jeremy.vincent@umontpellier.fr",
+    "url": "https://jejelazdeug.github.io/OnlinePortfolioJeremyVincent.github.io/",
+    "sameAs": ["https://orcid.org/0009-0009-7103-5503"],
+    "knowsAbout": ["Trypanosoma brucei", "Microtubules", "Tubulin post-translational modifications", "Expansion microscopy", "Parasite cell biology"]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ TOP BAR (navigation) ============ -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="rail-name" href="#profile">Jeremy Vincent</a>
+      <nav class="toc" aria-label="Sections">
+        <ol>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#goals">Career goals</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#games">Mini-games</a></li>
+        </ol>
+      </nav>
+      <a class="rail-cv" href="cv/Jeremy_Vincent_CV.pdf" download>Download CV</a>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+      <!-- ============ PROFILE ============ -->
+      <section id="profile" class="hero" aria-labelledby="name">
+        <figure class="slide">
+          <div class="slide-label">
+            <div>
+              <h1 id="name">Jeremy Vincent<span class="name-suffix">, PhD</span></h1>
+              <p class="slide-role">Parasite cell biologist</p>
+            </div>
+            <figcaption class="slide-caption">On the slide: trypanosomes imaged by expansion microscopy.</figcaption>
+          </div>
+          <div class="slide-specimen">
+            <img src="img/expansion-1600.webp"
+                 srcset="img/expansion-900.webp 900w, img/expansion-1600.webp 1600w"
+                 sizes="(max-width: 640px) 100vw, 620px"
+                 width="1600" height="1043"
+                 alt="Several trypanosomes in magenta and green fluorescence, their microtubule cytoskeleton and flagella visible after expansion microscopy.">
+          </div>
+        </figure>
+
+        <div class="hero-body">
+          <div class="hero-intro">
+          <p class="lede">
+            I study how the microtubule cytoskeleton is regulated in parasites. During my PhD at
+            MIVEGEC (CNRS, IRD, University of Montpellier), I investigated <span class="nowrap">β-tubulin</span> tyrosination,
+            an unusual feature of trypanosomatids, and showed that it tunes tubulin glutamylation and
+            parasite motility in <i>Trypanosoma brucei</i>. My toolkit combines CRISPR/Cas9 functional
+            genetics, expansion microscopy, TurboID proximity labeling and RNA-seq.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="cv/Jeremy_Vincent_CV.pdf" download>
+              <svg aria-hidden="true" viewBox="0 0 20 20" width="18" height="18"><path d="M10 3v9m0 0-4-4m4 4 4-4M4 15h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download CV (PDF)
+            </a>
+            <a class="btn" href="mailto:jeremy.vincent@umontpellier.fr">Email me</a>
+            <a class="btn" href="https://orcid.org/0009-0009-7103-5503" target="_blank" rel="noopener">ORCID</a>
+          </div>
+
+          <div class="picker" role="group" aria-labelledby="picker-label">
+            <p id="picker-label" class="picker-label">Pick your parasite</p>
+            <div class="picker-options">
+              <button type="button" class="picker-btn" data-choice="brucei" aria-pressed="true" title="Trypanosoma brucei">
+                <img src="img/cursor-brucei.png" alt="" width="32" height="32"><span class="sr-only">Trypanosoma brucei</span>
+              </button>
+              <button type="button" class="picker-btn" data-choice="leishmania" aria-pressed="false" title="Leishmania">
+                <img src="img/cursor-leishmania.png" alt="" width="32" height="32"><span class="sr-only">Leishmania</span>
+              </button>
+              <button type="button" class="picker-btn" data-choice="giardia" aria-pressed="false" title="Giardia">
+                <img src="img/cursor-giardia.png" alt="" width="21" height="32"><span class="sr-only">Giardia</span>
+              </button>
+              <button type="button" class="picker-btn" data-choice="classic" aria-pressed="false" title="Classic cursor">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M5 3l13 8-6 1.5L9 19z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span class="sr-only">Classic cursor</span>
+              </button>
+            </div>
+            <p class="picker-hint">Changes the cursor and the colours of the page.</p>
+          </div>
+
+          </div>
+          <div class="news">
+            <h2 class="news-title">Latest</h2>
+            <dl class="news-list">
+              <div>
+                <dt><time datetime="2026-11-03">3 Nov 2026</time></dt>
+                <dd>Defended my PhD in Biology and Health at the University of Montpellier (Doctoral School CBS2).</dd>
+              </div>
+              <div>
+                <dt>2026</dt>
+                <dd>First-author preprint coming soon on bioRxiv: “<span class="nowrap">β-tubulin</span> tyrosination tunes glutamylation and parasite motility in <i>Trypanosoma brucei</i>”.</dd>
+              </div>
+              <div>
+                <dt><time datetime="2025-10">Oct 2025</time></dt>
+                <dd>Best poster award at the EMBO Workshop on host–parasite relationships, Embiez.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <p class="contact-line">
+            <span>Montpellier, France</span>
+            <a href="mailto:jeremy.vincent@umontpellier.fr">jeremy.vincent@umontpellier.fr</a>
+            <a href="https://orcid.org/0009-0009-7103-5503" target="_blank" rel="noopener">ORCID 0009-0009-7103-5503</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section id="education" class="section" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <div class="edu-grid">
+          <ol class="entries">
+            <li class="entry">
+              <p class="entry-when">2023–2026</p>
+              <div class="entry-body">
+                <h3>PhD in Biology and Health</h3>
+                <p class="entry-where">University of Montpellier, Doctoral School CBS2 (Chemical and Biological Sciences for Health)</p>
+                <p>Thesis topic: <em>Importance of <span class="nowrap">β-tubulin</span> tyrosination in <span class="upright">Trypanosoma brucei</span></em>. Supervisor: Dr Maude Lévêque, MIVEGEC. Defended on 3 November 2026.</p>
+                <p>These years shaped my autonomy, critical thinking and experimental reasoning, from formulating biological questions to interpreting data and sharing results with the community.</p>
+              </div>
+            </li>
+            <li class="entry">
+              <p class="entry-when">2021–2023</p>
+              <div class="entry-body">
+                <h3>MSc in Biology and Health, Infectious Diseases</h3>
+                <p class="entry-where">University of Montpellier</p>
+                <p>My first in-depth exposure to fundamental research, with solid training in structural and cellular biology and in bacterial, viral and parasitic diseases.</p>
+              </div>
+            </li>
+            <li class="entry">
+              <p class="entry-when">2018–2021</p>
+              <div class="entry-body">
+                <h3>BSc-level training in Life Sciences</h3>
+                <p class="entry-where">University of Rouen Normandy, then Université Clermont Auvergne</p>
+                <p>A two-year technical degree (DUT) completed by a one-year bachelor’s programme.</p>
+              </div>
+            </li>
+          </ol>
+          <div class="map-frame">
+            <div id="edu-map" class="map" role="region" aria-label="Map of my study locations: Évreux, Clermont-Ferrand and Montpellier"></div>
+            <p class="map-note">From Normandy to Montpellier. Drag to explore.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RESEARCH ============ -->
+      <section id="research" class="section" aria-labelledby="research-title">
+        <h2 id="research-title">Research experience</h2>
+        <ol class="entries">
+          <li class="entry">
+            <p class="entry-when">2023–2026</p>
+            <div class="entry-body">
+              <h3>Doctoral researcher</h3>
+              <p class="entry-where">MIVEGEC (CNRS, IRD, University of Montpellier)</p>
+              <ul class="bullets">
+                <li>Investigated <span class="nowrap">β-tubulin</span> (de)tyrosination and its functions in the microtubule cytoskeleton of <i>Trypanosoma brucei</i> and <i>Leishmania</i>.</li>
+                <li>Showed that <span class="nowrap">β-tubulin</span> tyrosination tunes tubulin glutamylation and parasite motility (first-author preprint, 2026).</li>
+                <li>Combined CRISPR/Cas9 functional genetics, TurboID proximity labeling, iterative expansion microscopy and RNA-seq.</li>
+                <li>Co-authored a study of tubulin detyrosination in <i>Leishmania</i> (PNAS, 2025).</li>
+                <li>Supervised two Master’s students and one engineering student; taught cell biology and designed exam material for Master’s students.</li>
+              </ul>
+              <ul class="tags" aria-label="Key techniques">
+                <li>Iterative expansion microscopy</li><li>TurboID</li><li>CRISPR/Cas9</li><li>RNA-seq</li><li>Western blot</li><li>Supervision</li><li>Scientific writing</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry-when">2022</p>
+            <div class="entry-body">
+              <h3>Research intern, Master’s level</h3>
+              <p class="entry-where">Laboratory of Pathogens and Host Immunity (LPHI), University of Montpellier</p>
+              <p>Investigated the role of phosphatidylinositol 3-kinase (PI3K) in <i>Plasmodium falciparum</i> using a conditional DiCre knockout approach. Assessed PI3K function in hemoglobin digestion, apicoplast maintenance and artemisinin resistance through parasite culture, transfection, PCR/qPCR, fluorescence microscopy and Western blotting. This work contributed to a <i>Scientific Reports</i> article (2025).</p>
+              <ul class="tags" aria-label="Key techniques">
+                <li>qPCR</li><li>Parasite culture</li><li>Fluorescence microscopy</li><li>Conditional knockout</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry-when">2022</p>
+            <div class="entry-body">
+              <h3>Research intern, Master’s level</h3>
+              <p class="entry-where">CRBM (CNRS), University of Montpellier</p>
+              <p>Studied the subcellular localization of toxin–antidote effector proteins of the intracellular bacterium <i>Wolbachia</i> in <i>Drosophila</i> S2R+ cells. Generated plasmid constructs, performed lipofection-based transfections and analyzed protein localization by confocal microscopy.</p>
+              <ul class="tags" aria-label="Key techniques">
+                <li>PCR</li><li>In-Fusion cloning</li><li>Lipofection</li><li>Confocal microscopy</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry entry-minor">
+            <p class="entry-when">2018–2019</p>
+            <div class="entry-body">
+              <h3>Animal toxicology technician</h3>
+              <p class="entry-where">Citoxlab (now Charles River Laboratories), Miserey, France</p>
+              <p>Assisted in regulated preclinical toxicology studies in dogs, in compliance with animal-welfare and ethical guidelines: oral gavage, body-weight and water-intake monitoring, electrocardiogram recordings.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ PUBLICATIONS ============
+           To add a paper: copy one <li class="pub"> block and edit it.
+           When the preprint is online, replace the "pub-status" line by a DOI link. -->
+      <section id="publications" class="section" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+        <ol class="pubs" reversed>
+          <li class="pub">
+            <h3 class="pub-title"><span class="nowrap">β-tubulin</span> tyrosination tunes glutamylation and parasite motility in <i>Trypanosoma brucei</i></h3>
+            <p class="pub-authors"><strong>Vincent, J.</strong>, et al.</p>
+            <p class="pub-venue"><span class="pub-status">Preprint, submission to bioRxiv in progress</span> <span class="pub-year">2026</span></p>
+          </li>
+          <li class="pub">
+            <h3 class="pub-title">Tubulin detyrosination shapes <i>Leishmania</i> cytoskeletal architecture and virulence</h3>
+            <p class="pub-authors">Corrales, R.M., <strong>Vincent, J.</strong>, Crobu, L., Neish, R., Nepal, B., Espeut, J., Pasquier, G., Gillard, G., Cazevieille, C., Mottram, J.C., Wetzel, D.M., Sterkers, Y., Rogowski, K., Lévêque, M.F.</p>
+            <p class="pub-venue"><span><i>Proceedings of the National Academy of Sciences</i> 122, e2415296122</span> <span class="pub-year">2025</span>
+              <a class="pub-link" href="https://doi.org/10.1073/pnas.2415296122" target="_blank" rel="noopener">DOI 10.1073/pnas.2415296122</a></p>
+          </li>
+          <li class="pub">
+            <h3 class="pub-title">PI3-kinase has multiple functions in asexual blood stages of <i>Plasmodium falciparum</i></h3>
+            <p class="pub-authors">Al Monla, R., Penzo, M., Vallentin, A., Lohia, R., <strong>Vincent, J.</strong>, Berry, L., Gomes, A.R., Cerdan, R., Wengelnik, K.</p>
+            <p class="pub-venue"><span><i>Scientific Reports</i> 15, 16762</span> <span class="pub-year">2025</span>
+              <a class="pub-link" href="https://doi.org/10.1038/s41598-025-01397-1" target="_blank" rel="noopener">DOI 10.1038/s41598-025-01397-1</a></p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ AWARDS ============ -->
+      <section id="awards" class="section" aria-labelledby="awards-title">
+        <h2 id="awards-title">Awards</h2>
+        <ol class="awards">
+          <li class="award">
+            <div class="award-text">
+              <h3>Best poster award</h3>
+              <p class="entry-where">EMBO Workshop “Host–parasite relationship: from mechanisms to control strategies”</p>
+              <p class="award-when">Embiez, France, 5–8 October 2025</p>
+              <p class="award-poster">Poster: <em>MAPping the <span class="nowrap">β-tubulin</span> tyrosination landscape in <span class="upright">Trypanosoma brucei</span> via TurboID</em></p>
+            </div>
+            <div class="award-media">
+              <button type="button" class="thumb" data-lightbox="embiez" data-full="img/poster-embiez-2000.webp" data-caption="Poster, EMBO Workshop, Embiez 2025">
+                <img src="img/poster-embiez-480.webp" alt="Poster: MAPping the β-tubulin tyrosination landscape in Trypanosoma brucei via TurboID" width="480" height="679" loading="lazy">
+              </button>
+              <button type="button" class="thumb" data-lightbox="embiez" data-full="img/award-embiez-1600.webp" data-caption="Best poster award, EMBO Workshop, Embiez 2025">
+                <img src="img/award-embiez-480.webp" alt="Award ceremony photo at the EMBO Workshop in Embiez" width="480" height="426" loading="lazy">
+              </button>
+            </div>
+          </li>
+          <li class="award">
+            <div class="award-text">
+              <h3>Best poster award</h3>
+              <p class="entry-where">PhDays, MIVEGEC unit</p>
+              <p class="award-when">Montpellier, France, 25–26 May 2023</p>
+              <p class="award-poster">Poster: <em>Using proximity-dependent biotinylation to uncover the MAP code associated with a specific <span class="nowrap">β-tubulin</span> tyrosination pattern in <span class="upright">Trypanosoma brucei</span></em></p>
+            </div>
+            <div class="award-media">
+              <button type="button" class="thumb" data-lightbox="phdays" data-full="img/poster-phdays-2000.webp" data-caption="Poster, PhDays, Montpellier 2023">
+                <img src="img/poster-phdays-480.webp" alt="Poster: Using proximity-dependent biotinylation to uncover the MAP code associated with a specific β-tubulin tyrosination pattern" width="480" height="672" loading="lazy">
+              </button>
+              <button type="button" class="thumb" data-lightbox="phdays" data-full="img/award-phdays-1600.webp" data-caption="Best poster award, PhDays, Montpellier 2023">
+                <img src="img/award-phdays-480.webp" alt="Award photo at the PhDays in Montpellier" width="360" height="480" loading="lazy">
+              </button>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ CAREER GOALS ============ -->
+      <section id="goals" class="section" aria-labelledby="goals-title">
+        <h2 id="goals-title">Career goals</h2>
+        <ol class="goals">
+          <li class="goal">
+            <p class="goal-when">Short term</p>
+            <h3>Postdoctoral training abroad</h3>
+            <p>Join a lab abroad to work on <i>Giardia</i>, with a strong focus on cytoskeletal organization and dynamics, and build advanced expertise in parasite cell biology. I aim to obtain an EMBO or Marie Skłodowska-Curie postdoctoral fellowship.</p>
+          </li>
+          <li class="goal">
+            <p class="goal-when">Mid term</p>
+            <h3>Research scientist in France</h3>
+            <p>Secure a research scientist position in a French institution such as CNRS or INSERM, to pursue my research on parasite cell biology.</p>
+          </li>
+          <li class="goal">
+            <p class="goal-when">Long term</p>
+            <h3>An independent research programme</h3>
+            <p>Become a recognized expert in cytoskeletal organization and regulation in protozoan parasites, and help develop parasite cell biology in France through independent research, collaborations and mentoring.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ SCIENTIFIC HOBBIES ============ -->
+      <section id="hobbies" class="section" aria-labelledby="hobbies-title">
+        <h2 id="hobbies-title">Scientific hobbies</h2>
+        <div class="hobbies">
+          <article class="hobby">
+            <div class="hobby-visual hobby-visual-type" aria-hidden="true"><span>180</span><small>seconds</small></div>
+            <h3>Science communication</h3>
+            <p>Sharing research with broad audiences, including the short-format contest <i lang="fr">Ma thèse en 180 secondes</i> (My thesis in 180 seconds).</p>
+          </article>
+          <article class="hobby">
+            <button type="button" class="hobby-visual thumb-plain" data-lightbox="microscopy" data-full="img/expansion-1600.webp" data-caption="Trypanosomes imaged by expansion microscopy">
+              <img src="img/expansion-detail.webp" alt="Close-up of a trypanosome and its flagellum in expansion microscopy" width="640" height="640" loading="lazy">
+            </button>
+            <h3>Microscopy and imaging</h3>
+            <p>A special interest in advanced microscopy and its aesthetic side.</p>
+          </article>
+          <article class="hobby">
+            <button type="button" class="hobby-visual hobby-visual-cartoon thumb-plain" data-lightbox="cartoon" data-full="img/trypanosome-cartoon.webp" data-caption="Trypanosome cartoon">
+              <img src="img/trypanosome-cartoon.webp" alt="Hand-drawn cartoon of a blue-grey trypanosome with its black flagellum" width="601" height="700" loading="lazy">
+            </button>
+            <h3>Scientific cartooning</h3>
+            <p>Drawing cartoons to illustrate complex biological concepts for scientific meetings, like the parasites that act as cursors on this site.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ MINI-GAMES ============ -->
+      <section id="games" class="section" aria-labelledby="games-title">
+        <h2 id="games-title">Mini-games</h2>
+        <p class="section-intro">A break between two papers. <i>Trypano Run</i> is new: swim through the bloodstream as <i>Trypanosoma brucei</i>, the parasite behind sleeping sickness.</p>
+        <div class="game-tabs" role="tablist" aria-label="Choose a game">
+          <button type="button" role="tab" class="game-tab" id="tab-run" aria-controls="panel-run" aria-selected="true">Trypano Run</button>
+          <button type="button" role="tab" class="game-tab" id="tab-click" aria-controls="panel-click" aria-selected="false" tabindex="-1">Click the parasite</button>
+        </div>
+        <div class="game-panel" role="tabpanel" id="panel-run" aria-labelledby="tab-run">
+          <div data-trypano-run></div>
+        </div>
+        <div class="game-panel" role="tabpanel" id="panel-click" aria-labelledby="tab-click" hidden>
+          <div data-click-parasite></div>
+        </div>
+      </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Jeremy Vincent. Last updated November 2026.</p>
+    <p class="footer-links">
+      <a href="mailto:jeremy.vincent@umontpellier.fr">Email</a>
+      <a href="https://orcid.org/0009-0009-7103-5503" target="_blank" rel="noopener">ORCID</a>
+      <a href="cv/Jeremy_Vincent_CV.pdf" download>CV (PDF)</a>
+      <a href="https://github.com/jejelazdeug/OnlinePortfolioJeremyVincent.github.io" target="_blank" rel="noopener">Source code</a>
+    </p>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <figure class="lightbox-figure">
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button type="button" class="lightbox-btn lightbox-close" aria-label="Close">
+      <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-prev" aria-label="Previous image">
+      <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="lightbox-btn lightbox-next" aria-label="Next image">
+      <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/click-parasite.js" defer></script>
+  <script src="js/trypano-run.js" defer></script>
+</body>
 </html>
