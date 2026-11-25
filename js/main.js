@@ -11,12 +11,12 @@
   /* ---------- Pick your parasite (cursor + colours) ---------- */
   var pickerButtons = $$(".picker-btn");
   function currentChoice() {
-    if (root.getAttribute("data-cursor") === "classic") return "classic";
+    if (root.getAttribute("data-cursor") === "arrow") return "arrow";
     return root.getAttribute("data-parasite") || "brucei";
   }
   function applyChoice(choice, remember) {
-    if (choice === "classic") {
-      root.setAttribute("data-cursor", "classic");
+    if (choice === "arrow") {                       // basic white arrow, default colours
+      root.setAttribute("data-cursor", "arrow");
       root.setAttribute("data-parasite", "brucei");
     } else {
       root.setAttribute("data-cursor", "parasite");

@@ -78,5 +78,6 @@ og-image.jpg            image d’aperçu affichée quand le lien est partagé
 - Carte : [Leaflet](https://leafletjs.com), fonds © contributeurs OpenStreetMap, chargés seulement
   quand la partie Education apparaît à l’écran.
 - Polices : Bitter et Fira Sans, licence SIL Open Font (voir `fonts/`).
+- Icônes des titres de partie : dessinées dans le style de [Lucide](https://lucide.dev) (licence ISC), intégrées dans `css/style.css`.
 - Trypano Run s’inspire du jeu du dinosaure hors connexion de Chrome ; tous les sprites sont dessinés en code.
 - Dessins, images de microscopie et posters : Jeremy Vincent.
