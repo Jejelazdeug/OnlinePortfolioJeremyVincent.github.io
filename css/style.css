@@ -414,6 +414,33 @@ kbd {
 .run-touch button:active, .run-touch button.is-down { background: var(--accent-soft); }
 @media (pointer: coarse) { .run-touch { display: flex; } }
 
+/* Big Eater: a maze in a tissue */
+.be { max-width: 46rem; margin-inline: auto; }
+.be-frame {
+  position: relative; overflow: hidden;
+  border: 2px solid var(--ink); border-radius: var(--radius);
+  background: #fbf8fa;
+  touch-action: pan-y; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+.be-frame.is-playing { touch-action: none; }
+.be-frame:focus-visible { box-shadow: 0 0 0 3px var(--paper), 0 0 0 6px var(--accent-ink); }
+.be-canvas { display: block; width: 100%; height: auto; aspect-ratio: 580 / 330; }
+.be-pad {
+  display: none; justify-content: center; gap: .45rem; margin-top: .9rem;
+  grid-template-columns: repeat(3, 3.6rem); grid-template-rows: repeat(2, 3.2rem);
+}
+.be-pad button {
+  border: 2px solid var(--ink); border-radius: 12px; background: var(--sheet); color: var(--ink);
+  font-weight: 600; font-size: 1.25rem; touch-action: none; user-select: none; -webkit-user-select: none;
+}
+.be-pad [data-dir="up"] { grid-column: 2; grid-row: 1; }
+.be-pad [data-dir="left"] { grid-column: 1; grid-row: 2; }
+.be-pad [data-dir="down"] { grid-column: 2; grid-row: 2; }
+.be-pad [data-dir="right"] { grid-column: 3; grid-row: 2; }
+.be-pad button:active, .be-pad button.is-down { background: var(--accent-soft); }
+@media (pointer: coarse) { .be-pad { display: grid; } }
+
 /* Click the parasite: a counting chamber */
 .clicker-board {
   position: relative; height: 22rem; overflow: hidden;
@@ -508,7 +535,7 @@ kbd {
   .slide-label { border-right: 0; border-bottom: 2px solid var(--ink); padding: 1.2rem 1.25rem 1rem; }
   .slide-specimen { aspect-ratio: 16 / 10; min-height: 0; }
   .lede { font-size: 1.09rem; }
-  .run-frame { margin-inline: -1.25rem; border-radius: 0; border-left: 0; border-right: 0; }
+  .run-frame, .be-frame { margin-inline: -1.25rem; border-radius: 0; border-left: 0; border-right: 0; }
   .clicker-board { height: 19rem; }
   .lightbox-figure { padding: 4rem .75rem 1.5rem; }
   .lightbox-prev, .lightbox-next { top: auto; bottom: 1rem; transform: none; }

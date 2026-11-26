@@ -22,7 +22,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="fonts/bitter-var.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/fira-sans-400.woff" as="font" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=4">
 
   <script>
     /* Restore the visitor's parasite before first paint (avoids a colour flash). */
@@ -386,13 +386,17 @@
       <!-- ============ MINI-GAMES ============ -->
       <section id="games" class="section" aria-labelledby="games-title">
         <h2 id="games-title">Mini-games</h2>
-        <p class="section-intro">A break between two papers. <i>Trypano Run</i> is new: swim through the bloodstream as <i>Trypanosoma brucei</i>, the parasite behind sleeping sickness.</p>
+        <p class="section-intro">A break between two papers: swim through the bloodstream as <i>Trypanosoma brucei</i> in <i>Trypano Run</i>, or play a macrophage hunting bacteria in the new <i>Big Eater</i>.</p>
         <div class="game-tabs" role="tablist" aria-label="Choose a game">
           <button type="button" role="tab" class="game-tab" id="tab-run" aria-controls="panel-run" aria-selected="true">Trypano Run</button>
+          <button type="button" role="tab" class="game-tab" id="tab-eater" aria-controls="panel-eater" aria-selected="false" tabindex="-1">Big Eater</button>
           <button type="button" role="tab" class="game-tab" id="tab-click" aria-controls="panel-click" aria-selected="false" tabindex="-1">Click the parasite</button>
         </div>
         <div class="game-panel" role="tabpanel" id="panel-run" aria-labelledby="tab-run">
           <div data-trypano-run></div>
+        </div>
+        <div class="game-panel" role="tabpanel" id="panel-eater" aria-labelledby="tab-eater" hidden>
+          <div data-big-eater></div>
         </div>
         <div class="game-panel" role="tabpanel" id="panel-click" aria-labelledby="tab-click" hidden>
           <div data-click-parasite></div>
@@ -426,8 +430,9 @@
     </button>
   </dialog>
 
-  <script src="js/main.js?v=3" defer></script>
-  <script src="js/click-parasite.js?v=3" defer></script>
-  <script src="js/trypano-run.js?v=3" defer></script>
+  <script src="js/main.js?v=4" defer></script>
+  <script src="js/click-parasite.js?v=4" defer></script>
+  <script src="js/trypano-run.js?v=4" defer></script>
+  <script src="js/big-eater.js?v=4" defer></script>
 </body>
 </html>

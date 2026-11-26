@@ -66,6 +66,7 @@ index.html              tout le contenu du site
 css/style.css           mise en forme (couleurs, polices, mise en page)
 js/main.js              choix du parasite, menu, carte, visionneuse d’images, onglets des jeux
 js/trypano-run.js       le jeu Trypano Run
+js/big-eater.js         le jeu Big Eater (le macrophage)
 js/click-parasite.js    le jeu Click the parasite
 cv/Jeremy_Vincent_CV.pdf  le CV téléchargeable
 img/                    images optimisées (WebP) et curseurs
@@ -80,4 +81,5 @@ og-image.jpg            image d’aperçu affichée quand le lien est partagé
 - Polices : Bitter et Fira Sans, licence SIL Open Font (voir `fonts/`).
 - Icônes des titres de partie : dessinées dans le style de [Lucide](https://lucide.dev) (licence ISC), intégrées dans `css/style.css`.
 - Trypano Run s’inspire du jeu du dinosaure hors connexion de Chrome ; tous les sprites sont dessinés en code.
+- Big Eater reprend le principe des jeux de labyrinthe d’arcade, avec son propre labyrinthe et ses personnages (macrophage, Leishmania, Toxoplasma, T. cruzi, Plasmodium) dessinés en code.
 - Dessins, images de microscopie et posters : Jeremy Vincent.
